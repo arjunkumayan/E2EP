@@ -1,6 +1,7 @@
 package com.ma.qa.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,6 +25,13 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//td[contains(text(),'User: Arjun Singh ')]")
 	WebElement userName;
 
+	@FindBy(xpath="//a[contains(text()='New Contact')]")
+	WebElement newContact;
+	@FindBy(xpath="//a[@title='New Contact']")
+	WebElement hoverOnNewContact;
+	
+	
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -54,4 +62,13 @@ public class HomePage extends TestBase {
 		return new TaskPage();
 
 	}
+	public void hoverOnContactLink() throws InterruptedException
+	{
+		
+		Actions action=new Actions(driver);
+		action.moveToElement(contactLink).build().perform();
+		Thread.sleep(3000);
+		hoverOnNewContact.click();
+	}
+	
 }

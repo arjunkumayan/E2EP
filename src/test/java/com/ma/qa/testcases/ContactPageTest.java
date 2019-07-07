@@ -3,6 +3,7 @@ package com.ma.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ma.qa.base.TestBase;
@@ -17,6 +18,7 @@ public class ContactPageTest extends TestBase {
 	ContactsPage cp;
 	HomePage hp;
 	TestUtils tu;
+	String sheetName="contacts";
 	public ContactPageTest()
 	{
 		super();
@@ -49,6 +51,23 @@ public class ContactPageTest extends TestBase {
 		cp.selectContacts("arjun singh");
 	}
 	
+	@DataProvider
+	public Object[][] getCRMTestData()
+	{
+		Object data[][]=TestUtils.getTestData(sheetName);
+	
+	return data;
+	}
+	// this data provider is commented yet and lets see later it - arjun to fix it
+	@Test(priority=3)
+	//@Test(priority=3, dataProvider="getCRMTestData")
+	//public void validateCreateNewContactTest(String title,String fnam,String lnam,String com) throws InterruptedException
+	public void validateCreateNewContactTest() throws InterruptedException
+	{
+		hp.hoverOnContactLink();
+		cp.createNewContact("Mr.", "Tom", "peter", "Google");
+		//cp.createNewContact(title, fnam, lnam, com);
+	}
 	
 	@AfterTest
 	public void tearDown()

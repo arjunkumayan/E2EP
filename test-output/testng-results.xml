@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59113" started-at="2019-07-06T15:48:07Z" finished-at="2019-07-06T15:49:06Z">
+  <suite name="Default suite" duration-ms="95718" started-at="2019-07-07T12:10:53Z" finished-at="2019-07-07T12:12:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59113" started-at="2019-07-06T15:48:07Z" finished-at="2019-07-06T15:49:06Z">
+    <test name="Default test" duration-ms="95718" started-at="2019-07-07T12:10:53Z" finished-at="2019-07-07T12:12:29Z">
       <class name="com.ma.qa.testcases.ContactPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@57fffcd7]" name="setUp" is-config="true" duration-ms="25157" started-at="2019-07-06T15:48:07Z" finished-at="2019-07-06T15:48:32Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="setUp" is-config="true" duration-ms="28826" started-at="2019-07-07T12:10:53Z" finished-at="2019-07-07T12:11:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyContactsPageLabelTest()[pri:1, instance:com.ma.qa.testcases.ContactPageTest@57fffcd7]" name="verifyContactsPageLabelTest" duration-ms="36" started-at="2019-07-06T15:48:32Z" finished-at="2019-07-06T15:48:32Z">
+        <test-method status="FAIL" signature="verifyContactsPageLabelTest()[pri:1, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="verifyContactsPageLabelTest" duration-ms="176" started-at="2019-07-07T12:11:22Z" finished-at="2019-07-07T12:11:22Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[contacts labelismissing on the page expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: contacts labelismissing on the page expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at com.ma.qa.testcases.ContactPageTest.verifyContactsPageLabelTest(ContactPageTest.java:45)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyContactsPageLabelTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@57fffcd7]" name="setUp" is-config="true" duration-ms="33772" started-at="2019-07-06T15:48:32Z" finished-at="2019-07-06T15:49:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="setUp" is-config="true" duration-ms="28406" started-at="2019-07-07T12:11:22Z" finished-at="2019-07-07T12:11:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="selectContactName()[pri:2, instance:com.ma.qa.testcases.ContactPageTest@57fffcd7]" name="selectContactName" duration-ms="111" started-at="2019-07-06T15:49:06Z" finished-at="2019-07-06T15:49:06Z">
+        <test-method status="PASS" signature="selectContactName()[pri:2, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="selectContactName" duration-ms="216" started-at="2019-07-07T12:11:51Z" finished-at="2019-07-07T12:11:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectContactName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@57fffcd7]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-07-06T15:49:06Z" finished-at="2019-07-06T15:49:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="setUp" is-config="true" duration-ms="28815" started-at="2019-07-07T12:11:51Z" finished-at="2019-07-07T12:12:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateCreateNewContactTest()[pri:3, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="validateCreateNewContactTest" duration-ms="8315" started-at="2019-07-07T12:12:20Z" finished-at="2019-07-07T12:12:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateNewContactTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ma.qa.testcases.ContactPageTest@6500df86]" name="tearDown" is-config="true" duration-ms="877" started-at="2019-07-07T12:12:28Z" finished-at="2019-07-07T12:12:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
